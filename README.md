@@ -14,6 +14,7 @@ Prerequisites:
 
 Run:
 ```bash
+chmod +x scripts/build_pdf.sh
 ./scripts/build_pdf.sh
 ```
 
