@@ -1,6 +1,6 @@
 # Energy Recovery Through Biogas Production From STP Sludge at Azad Nagar, Hisar
 
-**M.Tech Thesis Report (Environment Science Engineering)**
+**M.Tech Thesis Report (Environmental Science Engineering)**
 
 ## Abstract
 This study evaluates biogas recovery potential from sewage treatment plant (STP) sludge collected from drying beds at Azad Nagar, Hisar, through a 30-day bench-scale anaerobic digestion experiment. Two feed mixtures were tested: **Sample 1 (Exp1)** using sewage sludge and water (1:1), and **Sample 2 (Exp2)** using sewage sludge, cow dung cake, and water (1:1:2). Daily gas production was measured by the water displacement method. Statistical analysis shows that co-digestion (Exp2) significantly improved daily gas output compared with mono-substrate digestion (Exp1) (Welch's t = -2.253, p = 0.028). Total cumulative production reached 966 units in Exp2 versus 690 units in Exp1 (40% higher mean daily production), confirming the benefit of nutrient-balanced co-digestion.
@@ -63,7 +63,7 @@ Biogas generated in sealed digesters displaced water in a connected measuring as
 - Descriptive and inferential statistics were computed using standard formulas.
 
 ### 4.4 Statistical Method
-An independent two-sample Welch t-test (two-tailed) was applied:
+An independent two-sample Welch t-test (two-tailed, unequal-variance form using the Welch-Satterthwaite approximation) was applied:
 
 \[
 t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
@@ -193,6 +193,8 @@ Actual site-specific laboratory values were not fully available; therefore, stan
 - t-statistic = -2.253
 - degrees of freedom \(\approx 53.978\)
 - two-tailed p-value = 0.0284
+
+Welch's test was selected to avoid assuming equal population variances. Because the two sample variances are close (273.497 and 262.630) and sample sizes are equal, the Welch degrees of freedom is expected to be close to the pooled reference \((n_1+n_2-2)=54\), consistent with the computed value of 53.978.
 
 At \(\alpha = 0.05\), p < 0.05, so \(H_0\) is rejected. The difference in mean daily production is statistically significant; co-digestion (Exp2) outperforms sludge-only digestion (Exp1).
 
