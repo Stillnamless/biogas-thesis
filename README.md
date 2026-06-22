@@ -18,5 +18,7 @@ chmod +x scripts/build_pdf.sh
 ./scripts/build_pdf.sh
 ```
 
+Note: the script resolves paths from its own location, so it can be run from any working directory.
+
 Output:
 - `thesis_report.pdf`

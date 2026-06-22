@@ -15,12 +15,15 @@ if ! command -v xelatex >/dev/null 2>&1; then
   exit 1
 fi
 
-pandoc "$INPUT_MD" \
+if ! pandoc "$INPUT_MD" \
   --from gfm \
   --pdf-engine=xelatex \
   --toc \
   --number-sections \
   -V geometry:margin=1in \
-  -o "$OUTPUT_PDF"
+  -o "$OUTPUT_PDF"; then
+  echo "Error: pandoc failed to convert $INPUT_MD to PDF." >&2
+  exit 1
+fi
 
 echo "Generated: $OUTPUT_PDF"
